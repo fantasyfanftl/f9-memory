@@ -1,0 +1,13 @@
+- [Lychee game site](lychee-game-site.md) — user's Chinese single-file HTML mini-game hub deployed to GitHub Pages
+- [User GitHub](user-github.md) — GitHub identity and repo layout
+- [Open browser after updates](feedback-open-after-update.md) — always open the game in browser after every iteration, don't wait for the ask
+- [No spell-out of refresh shortcut](feedback-no-shortcut-spell.md) — say「强刷」or「刷新」, don't write out Ctrl+Shift+R every time
+- [Use gpt-image-2 for image generation](feedback-use-gpt-image-2.md) — for any image task, invoke the gpt-image-2 skill (v1.0.1)
+- [案卷九章 clues must be rigorous](feedback-mystery-clues-rigorous.md) — every clue must serve motive/means/opportunity; 9 clues must fully imply the answer
+- [细节物件承载角色故事](design-detail-objects-carry-story.md) — 便利店场景里的手写杯 / 便签 / 锁屏等，应该"外化"角色心境；不装饰
+- [Midnight Store 剩余任务](project-midnight-store-remaining.md) — 便利店项目剩余优化清单：手机 overlay / 3 个 POV 内容对齐 / 图片校准 / 结局图鉴自适应
+- [求合体 rules](project-qiuheti-rules.md) — 「求合体」是三消合成 + 铺满地图,不是 2-drag 合并;别搞混
+- [Per-town unique icons](project-per-town-unique-icons.md) — 求合体地图每个村庄要有自己主题的独特图标,不能都用同一张
+- [3D 微缩图标生图 SOP](sop-3d-miniature-icon-pipeline.md) — 生 PNG → 抠透明 → WEBP 压 → cache-bust,含 prompt 心法/尺寸叙事表/避雷坑
+- [Voice input tool](voice-input-tool.md) — 自建 faster-whisper 语音输入 (Caps Lock PTT), GPU 加速, 注册表 Run 键静默开机启动
+- [User programs](user-programs.md) — 用户常用程序的路径映射表；说"打开 XX"时先查这里再启动
