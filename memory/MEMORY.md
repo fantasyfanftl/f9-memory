@@ -34,6 +34,7 @@
 - [历史资产遗留问题](project-legacy-asset-issues.md) — 原色无 ID 导致染色对不上（薯片头套）；外派改 UV 导致返工
 - [V9 base 基础设施速查](project-v9-base-infrastructure.md) — V9 base_id / 表 / 群 chat_id / 人员 open_id / 数据操作铁律
 - [飞书 AI 2026-07-07 dump 快照](feishu-ai-dump-snapshot.md) — 飞书那边运营层 memory 快照，供交叉引用
+- [飞书 AI trigger 减负 2026-07-07](feishu-ai-trigger-reduction-2026-07-07.md) — A+B 方案实施，D 不做守铁律 #5，7-14 复盘 3 指标
 
 ## 工作 · 人员反馈
 
