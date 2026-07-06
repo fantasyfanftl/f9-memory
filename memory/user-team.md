@@ -14,7 +14,7 @@ metadata:
 | 人 | 角色 / 特点 | 详细 |
 |---|---|---|
 | **陈川** | 挂点BS · Houdini 技术侧；对接顺畅、有默契 | feedback-chen-chuan-vs-xiao-shi |
-| **石静玲（简称小石）** | 通用外派；对接容易懵，需要交付检查清单；挂点美术侧 · 调整挂点位置 + 截图提交 | feedback-chen-chuan-vs-xiao-shi + project-attachment-point-bs |
+| **石静玲（简称小石）** | 通用外派；对接容易懵，需要交付检查清单；挂点美术侧 · 调整挂点位置 + 截图提交；open_id `ou_0690bcdb02f75c9b6f0e1c83da30a4e7` | feedback-chen-chuan-vs-xiao-shi + project-attachment-point-bs |
 | **岳淑茹** | 挂点美术侧 · 河北奥玛；提交多批外包文件 | project-accessories-active |
 | **王智超** | 通用外派；技术独立强；颜色偏红、命名不规范 | feedback-wang-zhichao |
 | **陈明星** | 通用外派；学习积极；材质、造型需教学式指导 | feedback-chen-mingxing |
