@@ -29,6 +29,7 @@
 - [在研配饰清单](project-accessories-active.md) — 当前所有活跃项目（YG098/P197/P163/P209/ST019/P142/ST021）+ 16 项在研
 - [河北奥玛外包状态](project-hebei-aoma-status.md) — 殷岩岩提交的多批文件待审核
 - [外派经验分享计划](project-outsource-experience-share.md) — 组织陈明星等人做经验分享
+- [历史资产遗留问题](project-legacy-asset-issues.md) — 原色无 ID 导致染色对不上（薯片头套）；外派改 UV 导致返工
 
 ## 工作 · 人员反馈
 
@@ -44,6 +45,10 @@
 - [数据同步只填空白](feedback-only-fill-blanks.md) — 向主表同步外部数据时不覆盖已有字段
 - [定时提醒需求](feedback-timer-reminder.md) — 菜刀说"可以了"未归档时提醒手动上传截图
 - [文档风格偏好](feedback-doc-style.md) — 拒绝长理论；步骤清单 + ❌✅速查 + 加粗禁忌
+- [08 版本教训](feedback-08-version-lessons.md) — 活多没规划全程被动，下次要主动 timeline + 警戒线
+- [原画沟通成本](feedback-artist-comm-cost.md) — 菜刀反馈总在猜，靠反问模板 + 示范图降本
+- [AI 生图受挫](feedback-ai-gen-instability.md) — 不稳定/三视图偏差大；定位为灵感辅助不是成品
+- [焦虑影响判断](feedback-anxiety-affects-judgment.md) — 急的时候别做重大判断，找搭档兜底
 
 ## 工作 · SOP
 
@@ -57,3 +62,6 @@
 - [工作量记录](sop-work-time-tracking.md) — 每天记预估/实际/中断源，找时间去向
 - [每周外派任务分配](sop-external-task-assignment.md) — 避免人力空闲和任务撞车
 - [反馈用图/视频](sop-feedback-with-visuals.md) — 3D 视觉反馈用视觉物料比文字准
+- [待写：配件 check 表 + 外派/外包制作规范](sop-piece-check-list-needed.md) — open item，找空 2h 先做外派手册整合
+- [挂点环境限制](sop-attachment-env-constraint.md) — 挂点/BS 只能楼上做（拉 main），派任务要考虑楼上时间成本
+- [漏传排查 SOP](sop-file-transfer-check.md) — 模型/贴图/材质 3 项核对，防止"做了但没传"
