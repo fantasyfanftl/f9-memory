@@ -4,10 +4,56 @@
 - [No spell-out of refresh shortcut](feedback-no-shortcut-spell.md) — say「强刷」or「刷新」, don't write out Ctrl+Shift+R every time
 - [Use gpt-image-2 for image generation](feedback-use-gpt-image-2.md) — for any image task, invoke the gpt-image-2 skill (v1.0.1)
 - [案卷九章 clues must be rigorous](feedback-mystery-clues-rigorous.md) — every clue must serve motive/means/opportunity; 9 clues must fully imply the answer
-- [细节物件承载角色故事](design-detail-objects-carry-story.md) — 便利店场景里的手写杯 / 便签 / 锁屏等，应该"外化"角色心境；不装饰
-- [Midnight Store 剩余任务](project-midnight-store-remaining.md) — 便利店项目剩余优化清单：手机 overlay / 3 个 POV 内容对齐 / 图片校准 / 结局图鉴自适应
+- [细节物件承载角色故事](design-detail-objects-carry-story.md) — 便利店场景里手写物件应"外化"角色心境；旧例子（等妈化疗）已作废，人设以 canon 为准
+- [Midnight Store · ⭐ 开工第一读物 kickoff](midnight-store-cashier-kickoff.md) — 下次会话打开就读这条 · 5 分钟全局速览 + 5 步执行顺序 + 给代码 AI 的标准指令模板
+- [Midnight Store · 收银员剧本正典](midnight-store-cashier-canon.md) — 用户 2026-07-06 交付的完整分镜剧本，任何 beat 文本改动的唯一权威
+- [Midnight Store · 收银员机制骨架](midnight-store-cashier-arch.md) — 下次会话删 JS 层重写时的架构决策：保留什么 / 删什么 / CASHIER_TIMELINE / v3 存档 / 命名对照表
+- [Midnight Store · 验收正典 17 用例](midnight-store-cashier-acceptance.md) — 兜底逻辑测试用例全集，重写完必须逐条跑过才发布
+- [Midnight Store · v1.0 之后扩展 backlog](midnight-store-cashier-future.md) — v1.1 氛围细化 / v1.2 多周目文本 / v2.0 多客同店 + 三 POV 框架 · 只列架构方向和预留规则
+- [Midnight Store · 自检 checklist](midnight-store-selfcheck.md) — 改任何东西之前跑一遍：剧本对齐 / 顶视图对齐 / hotspot 校对 / 反模式清单 / 发布 checklist
 - [求合体 rules](project-qiuheti-rules.md) — 「求合体」是三消合成 + 铺满地图,不是 2-drag 合并;别搞混
 - [Per-town unique icons](project-per-town-unique-icons.md) — 求合体地图每个村庄要有自己主题的独特图标,不能都用同一张
 - [3D 微缩图标生图 SOP](sop-3d-miniature-icon-pipeline.md) — 生 PNG → 抠透明 → WEBP 压 → cache-bust,含 prompt 心法/尺寸叙事表/避雷坑
 - [Voice input tool](voice-input-tool.md) — 自建 faster-whisper 语音输入 (Caps Lock PTT), GPU 加速, 注册表 Run 键静默开机启动
 - [User programs](user-programs.md) — 用户常用程序的路径映射表；说"打开 XX"时先查这里再启动
+
+## 工作 · 岗位与团队
+
+- [Work role](user-work-role.md) — Papergames 恋与深空 3D 角色组，配饰审核 + 挂点BS + 外派管理
+- [Team members](user-team.md) — 陈川/小石/王智超/陈明星/石静玲/岳淑茹/菜刀/小杜/@牛奶 速查
+
+## 工作 · 项目状态
+
+- [挂点与BS结算](project-attachment-point-bs.md) — 帽子/发饰/耳饰挂角色身上的位置计算，含团队分工
+- [配饰数据流水线](project-accessory-pipeline.md) — 三表联动 + 挂点镜像 + 截图归档 + 排期同步的基础设施
+- [在研配饰清单](project-accessories-active.md) — 当前所有活跃项目（YG098/P197/P163/P209/ST019/P142/ST021）+ 16 项在研
+- [河北奥玛外包状态](project-hebei-aoma-status.md) — 殷岩岩提交的多批文件待审核
+- [外派经验分享计划](project-outsource-experience-share.md) — 组织陈明星等人做经验分享
+
+## 工作 · 人员反馈
+
+- [王智超对接](feedback-wang-zhichao.md) — 技术独立强；颜色偏红（新显示器） + 命名不规范是常见坑
+- [陈明星对接](feedback-chen-mingxing.md) — 学习积极；材质和造型需要教学式指导
+- [陈川 vs 小石](feedback-chen-chuan-vs-xiao-shi.md) — 陈川有默契、小石需要交付检查清单
+
+## 工作 · 通用原则/偏好
+
+- [碎片化工作](feedback-fragmented-work.md) — 主线被日常打断，要量化时间去向
+- [外包审核节奏](feedback-outsource-rhythm.md) — 高模仔细对，低模顺畅推
+- [材质原则](feedback-material-principles.md) — 对比度（黑够黑亮够亮） + 边光让位反射
+- [数据同步只填空白](feedback-only-fill-blanks.md) — 向主表同步外部数据时不覆盖已有字段
+- [定时提醒需求](feedback-timer-reminder.md) — 菜刀说"可以了"未归档时提醒手动上传截图
+- [文档风格偏好](feedback-doc-style.md) — 拒绝长理论；步骤清单 + ❌✅速查 + 加粗禁忌
+
+## 工作 · SOP
+
+- [挂点BS完整工作流](sop-attachment-point-workflow.md) — 分工/顺序/提交/踩坑/待办跟踪全流程
+- [美术外包 OA 流程](sop-art-outsource-oa-flow.md) — 发起需求单 + X3角色组人员情况表
+- [耳饰佩戴规范](sop-earring-fit.md) — 耳夹/耳堵/耳钩制作检查点
+- [颜色校色 SOP](sop-color-check.md) — 每次提交前必校，尤其对王智超
+- [命名规范](sop-naming-conventions.md) — 染色加01/02后缀，材质球别撞名
+- [文件提交常识](sop-file-submission-tips.md) — pin/打包/引擎截图压缩正常/版本优先级
+- [外包分级](sop-outsource-triage.md) — 快速过 vs 仔细对，别让所有文件排队
+- [工作量记录](sop-work-time-tracking.md) — 每天记预估/实际/中断源，找时间去向
+- [每周外派任务分配](sop-external-task-assignment.md) — 避免人力空闲和任务撞车
+- [反馈用图/视频](sop-feedback-with-visuals.md) — 3D 视觉反馈用视觉物料比文字准
