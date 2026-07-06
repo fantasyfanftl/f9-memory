@@ -20,7 +20,8 @@
 ## 工作 · 岗位与团队
 
 - [Work role](user-work-role.md) — Papergames 恋与深空 3D 角色组，配饰审核 + 挂点BS + 外派管理
-- [Team members](user-team.md) — 陈川/小石/王智超/陈明星/石静玲/岳淑茹/菜刀/小杜/@牛奶 速查
+- [Team members - 外派](user-team.md) — 陈川/小石/王智超/陈明星/石静玲/岳淑茹 (外派) + 菜刀/小杜/@牛奶 (内部对接)
+- [Team members - 4 组内部同事](user-team-internal.md) — 麦大麦/迪迦/翎汐蝶/阿彭/文安/别急/零一 (Papergames 内部)
 
 ## 工作 · 项目状态
 

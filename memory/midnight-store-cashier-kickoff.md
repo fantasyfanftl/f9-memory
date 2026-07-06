@@ -44,6 +44,13 @@ mv C:/Users/tianlan/lycheeGame/midnight-store.html C:/Users/tianlan/lycheeGame/m
 - Web Audio 全套函数（ensureAudio / startAmbient / start*Ambient / playDoorChime / playFluorescent / playPhoneVibration / startCashierEarbudSong / stopCashierEarbudSong / startCashierBackgroundMusic / playArcComplete / stopAmbient 等）
 - Assets：`assets/audio/*.mp3` / `assets/img/*.webp`
 - Utility：renderTextWithQuotes · toast · showScreen · formatGameTime · updateClockUI · scrollToCard 等
+- **HOTSPOTS 静态坐标全表**（phone / catBowl / milkCabinet / odenPot / driverSeat / doorway / register / nurseObserve / teenObserve 等）—— **完全沿用 legacy 数值**，不重新计算
+
+**v1.0 完全沿用 legacy 实现的 4 项表现层**（不做重构 · 稳定无风险）：
+- 手机 overlay 样式与结构
+- speechSynthesis 语音播报逻辑
+- 图鉴入口按钮位置
+- 窗外光晕效果
 
 **从 legacy 彻底删除的旧逻辑**（新文件不要复制）：
 - 旧 BEATS 数组（`BEATS = { cashier: [...], nurse: [...], driver: [...], teen: [...] }` 全都删）
@@ -53,6 +60,7 @@ mv C:/Users/tianlan/lycheeGame/midnight-store.html C:/Users/tianlan/lycheeGame/m
 - 旧 `_currentBeatIndex === 0` 硬编码（改判 kind）
 - 旧 v1 / v2 saveState 迁移逻辑（直接从 v3 开始）
 - 旧多角色 POV 相关 render 分支（其他 POV 按 A3 半透明灰色处理）
+- **CP 系统整套**：`CONVERGENCES` 表 · `state.cpProgress` · `state.convergences` · beat 里的 `cps: [...]` 字段 · 所有 CP 解锁 UI 逻辑 —— v1.0 无跨视角内容，保留即冗余 + 易触发状态残留 · v2.0 再重新接入
 
 ---
 
@@ -124,6 +132,8 @@ mv C:/Users/tianlan/lycheeGame/midnight-store.html C:/Users/tianlan/lycheeGame/m
 - 文本渲染：整段淡入 200ms · 选项延迟 150ms 淡入 · 选中后结果文本 300ms 淡入
 - 场景切换：400ms `ease-in-out` · 门铃先响 120ms 后 scrollToCard · 玩家操作优先于自动动画
 - Hotspot 无默认高亮 · hover 只做轻微 opacity 变化 · 「继续」按钮 30% → 80% opacity
+- **⚠️ HOTSPOTS 坐标从 legacy 复制的同时，对照 `C:\Users\tianlan\lycheeGame\docs\convenience-store-design.md` 顶视图逐个校验热区跟场景物件的位置一致性 —— 顺手做，发现偏差顺手调整，不要留到最后**
+- **⚠️ 沉浸感四层规范 v1.0 项必须落到位** —— 见 arch §20：环境音分层混音表 · UI 音效消音 -18db · 客人离店 150ms 后玻璃门合上 · 深夜色彩基调 · 文本区毛玻璃底 · 零错误提示 · 场景视觉呼应结局 flag（`document.body.classList` 切换）
 
 **快速试玩**：切场景 / 快速点击不要有动画堆叠鬼畜。
 
@@ -166,3 +176,91 @@ start "" "https://fantasyfanftl.github.io/lycheeGame/midnight-store.html"
 ```
 
 **发布前**：strong 强刷 + 走完店员一整晚 + F12 Console 看无 red error + 17 项验收全过 → 才算发布合格。
+
+### Legacy 偏差对照 QA 清单（11 条 · 重写时对照 legacy 逐条修正）
+
+除了 acceptance 17 项功能验收，还必须对照当前 legacy 版本（`midnight-store-v1-legacy.html`）修正下面 11 处已知偏差。这些**是 legacy 有、v1.0 规范不该有**的东西，重写时必须**主动清除或改造**，不能沿用。
+
+#### 🔴 核心机制偏差（4 条 · 与规范直接冲突）
+
+| ID | Legacy 现状 | v1.0 规范修正 | 参考 |
+|---|---|---|---|
+| **M1** | 标题屏 4 个 POV 全可点击 | nurse/driver/teen 半透明灰色 + 点击弹「专属故事 · 敬请期待」淡字 2s 自动消失 | arch A3 |
+| **M2** | 图鉴叫「交汇图鉴 · 六组不经意的相遇」跨角色 CP 体系 | 图鉴改「**店员篇 · 9 / 9**」+ 底部小字「更多人物篇章 敬请期待」· CP 系统整套（CONVERGENCES / cpProgress / convergences / cps 字段）**完全删除** | arch A4 + 删除清单 |
+| **M3** | 场景里显性 `01:47` `03:00` 时间数字 | **时间轴全程隐形** · 玩家仅通过氛围 / 光影 / 客流节奏感知 · 全站不出现任何倒计时 / 时间戳 | arch 隐形时间轴核心原则 |
+| **M5** | 标题页直接进场景，无开局演出 | 进 cashier POV 后 700ms 自动播 opening beat（戴耳机 / 手机震动 / 欠费提醒锁屏） | canon 开场 + arch A2 + arch §14 |
+
+#### 🟡 体验氛围问题（4 条 · 影响沉浸感）
+
+| ID | Legacy 现状 | v1.0 规范修正 | 参考 |
+|---|---|---|---|
+| **E1** | `¥8` `¥6` `¥3.5` 价签到处标 · 像模拟经营 | 保留极少量价签做真实感铺垫 · 大部分去掉 · 视觉重心还给空间氛围与人物 | 整体克制留白基调 |
+| **E2** | 「四个陌生人，交汇成一场安静的无人知晓的温柔」这类直白抒情 | 克制留白 · 用细节说话 · **不直接告诉玩家"这很温柔"**——好的氛围是玩家自己感受到的 | canon 叙事节奏 + [[design-detail-objects-carry-story]] |
+| **E3** | 窗边座位区域摆日用品 / 泡面 / 纸巾 | 窗边只是吧台歇脚区 · 冷饮柜旁置 · 食品货架在左侧 | `docs/convenience-store-design.md` 顶视图 |
+| **E4** | 结局只一句笼统抒情 · 冷漠 / 热心选择完全一样 | 基础静帧 + 按 flag 命中追加 0-18 行细节 · 按 CASHIER_TIMELINE step 固定顺序 | canon 结局 flag 增量变体表 |
+
+#### 🟢 其他细节（3 条 · 命名 + 动效）
+
+| ID | Legacy 现状 | v1.0 规范修正 | 参考 |
+|---|---|---|---|
+| **O1** | 「长途司机」/「少年」 | 「**网约车司机**」/「**叛逆少年**」 · 全站统一 | canon 人设 |
+| **O2** | 打字机逐字显示 | **整段淡入 200ms ease-out + 点击推进** | arch §15 UI 动画规范 |
+| **O3** | 场景切换生硬 | **400ms ease-in-out 平滑滑动 + 门铃前置 120ms + 玩家操作优先于自动动画** | arch §15 UI 动画规范 |
+
+**验收方式**：M1-M5 + E1-E4 + O1-O3 一共 11 条，重写完打开新版本走一遍，逐条对着看——**"legacy 里有的 legacy 味"必须清干净**。跟 acceptance 17 项功能验收互补：acceptance 保证功能对，这份 QA 清单保证 legacy 坑不再复现。
+
+---
+
+## 五、里程碑速查表（过程中随时对照进度）
+
+| 里程碑 | 完成节点 | 验收标准 | 累计耗时 |
+|---|---|---|---|
+| **M1 · 骨架可用** | Step 1 完成 | 状态机可运行 · dev panel 切阶段无异常 · 底层架构对齐 arch 规范 | ~30-45 min |
+| **M2 · 主线可玩** | Step 2 完成 | 全程只点收银台可完整通关 · 14 段 beat 剧本文本全量落地 · 核心交互正常 | ~90-135 min |
+| **M3 · 版本就绪** | Step 5 完成 | 全模块落地 · 17 项验收全过 · 符合所有 v1.0 硬约束 · 可直接发布 | ~3-5 h |
+
+**M2 是最重要的锚点** —— 到 M2 就有一份"可玩的东西"，即使 Step 3-5 没做完也能给用户 demo。写代码时优先保 M2，别在 Step 3 动效上花过多时间。
+
+---
+
+## 六、发布后收尾动作（M3 达成后必做）
+
+1. **版本归档**：Save 后本地脚本会自动 commit + push · 稳定发布后手动 rename 为 `midnight-store-v1.0-stable.html` 保留可追溯版本
+   ```bash
+   cp C:/Users/tianlan/lycheeGame/midnight-store.html C:/Users/tianlan/lycheeGame/midnight-store-v1.0-stable.html
+   ```
+2. **文档同步**：如果实现层有跟 arch / acceptance 不完全对齐的微调，回来更新对应 memory 保证口径唯一（选 arch memory 为准）
+3. **产出版本说明**：写进 handoff.md 底部 · 极简三行：
+   - v1.0 包含内容（收银员单视角 · 8 步 timeline · 14 beat · 9 图鉴 · 单视角结局）
+   - 已知限制（其他 3 POV 未开放 · 交叉彩蛋未开放 · 图鉴 9/9 仅本篇）
+   - 后续迭代方向（v1.1 氛围细化 · v1.2 多周目文本 · v2.0 多客同店 + 三 POV）
+
+---
+
+## 七、风险预案（提前想好应对，不慌）
+
+| 风险 | 应对 |
+|---|---|
+| **旧代码复用出现兼容问题** | 只复用**静态资产**（HTML/CSS/音频/SVG/DOM 骨架）· JS 逻辑层**完全从零重写**·  不强行复用旧的 BEATS / render 分发 / 硬编码 hack · 避免被旧架构拖累 |
+| **动效实现与设计预期有偏差** | 先保证功能可用 + 参数基本符合 arch §15 规范（200ms / 400ms / ease-in-out）· 细节体感优化后置到 v1.1 · 不阻塞主流程开发 |
+| **出现未预判的边界 bug** | 优先修复影响主线通关的核心 bug（S 类 + A 类用例失败）· 边缘场景问题（部分 E 类 / V01 细节）记录到 backlog 后续迭代处理 |
+| **开发耗时超出 5h 预期** | 优先保 M2 里程碑 · 配套模块（图鉴文案 / dev panel 次要按钮 / 异常兑底文案）可简化落地 · 核心体验先闭环 · 精工留给下一次会话 |
+
+---
+
+## 八、启动指令与中途查阅
+
+**下次会话触发本流程**：用户说「**开始重写便利店**」或类似 signal → AI 直接读本 kickoff → 按 Step 1-5 执行 · 不用来问设计问题
+
+**中途查阅速查**：
+- 「翻 canon」→ 打开 [[midnight-store-cashier-canon]] 找剧本文本
+- 「翻 arch」→ 打开 [[midnight-store-cashier-arch]] 找机制 / UI / 命名规范
+- 「跑 acceptance」→ 打开 [[midnight-store-cashier-acceptance]] 按 17 项逐条自测
+- 「查 future」→ 打开 [[midnight-store-cashier-future]] 判断某功能是不是 v1.0 该做（99% 是"v1.0 不做"）
+- 「查 selfcheck」→ 打开 [[midnight-store-selfcheck]] 找改动前的自检项
+
+**M3 达成后可衔接的方向**（用户可能会问下一步做啥）：
+- v1.1 · 5 条氛围细化（关键词高亮 / 文本-音效联动 / 场景内错落淡入 / 呼吸微动效 / 环境音渐变）
+- v1.2 · 多周目文本变体（同一 beat 二周目起换说法）
+- v2.0 · 多客同店 + 三 POV 内容框架 + 跨视角彩蛋预埋
+- 见 [[midnight-store-cashier-future]] 详情

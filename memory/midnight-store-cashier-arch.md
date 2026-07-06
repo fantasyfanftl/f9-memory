@@ -28,7 +28,7 @@ metadata:
 ### 保留（HTML / CSS / assets 不动）
 - `<head>` 里所有 CSS —— 黑白电视质感、hotspot 视觉、character SVG 样式、卡片切换动画、图鉴 UI、结局屏、手机 overlay 样式（`.phone-overlay`）
 - HTML 骨架：`#title-screen` / `#game-screen` / `#ending-screen` / `#dialogue-overlay` / `#inline-panel` / `#phone-overlay` / `#char-tabs` / `#scene-cards` / `#dev-panel` / notebook 图鉴
-- 5 张 SVG 场景卡片的 `<svg>` 内容（doorstep / window / shelves / register / dispenser）
+- 5 张 SVG 场景卡片的 `<svg>` 内容（doorstep / window / shelves / register / dispenser）—— **v1.0 保留 5 卡物理布局**：`register` 与 `dispenser` 设定为"同一物理空间（收银台+热食区）的两个视角卡"，玩家左右滑动可切换查看。v1.1 迭代时合并为单卡 + 重绘全景图（见 [[midnight-store-cashier-future]] v1.1 backlog）
 - Web Audio 子系统全部函数：`ensureAudio` / `startAmbient` / `startCashierAmbient` / `startNurseAmbient` / `startDriverAmbient` / `startTeenAmbient` / `startCashierEarbudSong` / `stopCashierEarbudSong` / `startCashierBackgroundMusic` / `setEarbudSongVolume` / `playDoorChime` / `playFluorescent` / `playPhoneVibration` / `playArcComplete` / `stopAmbient` —— 音频参数是磨过很久的，不重写
 - `assets/audio/*.mp3`（Suno 生成的耳机歌背景音乐）
 - `assets/img/*.webp` / `*.png`（gpt-image-2 生成的场景图）
@@ -37,12 +37,14 @@ metadata:
 - 图鉴 / 结局屏 / notebook 的展示代码（`showNotebook` / `showEnding` 的 DOM 操作层，不含数据组装）
 - 存档 utility：`SAVE_KEY` / `localStorage.setItem/getItem` 的 wrapper，但**存档结构从零设计**
 - dev panel 全套（`updateDevPanel` / `updateDevTimeline` / `updateDevFloorplan` 等），继续保留但适配新数据模型
+- **HOTSPOTS 静态坐标全表 · v1.0 完全沿用 legacy**（phone / catBowl / milkCabinet / odenPot / driverSeat / doorway / register / nurseObserve / teenObserve 等）—— 复用旧场景图 = 复用旧坐标，不重新计算 · 只有以后替换场景图时才对应调整
+- 手机 overlay 样式与结构 / speechSynthesis 语音播报逻辑 / 图鉴入口按钮位置 / 窗外光晕效果 —— **4 项表现层 v1.0 全部复用 legacy 实现**，不做重构（都不影响核心逻辑，稳定无风险）
 
 ### 删（所有 JS 逻辑层从零）
-- `CHARACTERS` / `NPC` / `HOTSPOTS` —— 结构保留但重新定义（要含保洁 / 代驾）
+- `CHARACTERS` / `NPC` / `HOTSPOTS` —— 表结构保留但重新定义（NPC 要含保洁 / 代驾 · HOTSPOTS **坐标数值**从 legacy 复制）
 - `BEATS`（含所有 cashier / nurse / driver / teen 数组）—— 从零，cashier 按 canon 剧本 14 段，其他三个 POV **本次不重写内容**，先用空数组占位（`BEATS.nurse = []` 等），走 arc-empty 自动 completed 兜底
 - `CASHIER_TIMELINE` —— 保留本次设计
-- `CONVERGENCES` —— 15 个 CP 定义可保留，但**跟 nurse/driver/teen 挂钩的 CP 都拿不到 unlock**（另一半 POV 是空的）。可以先保留 CP1-CP9（cashier + oldman/nurse/driver/teen 单侧），跨 POV CP（CP10-CP16）先注释掉
+- **`CONVERGENCES` 表 + `state.cpProgress` + `state.convergences` + 所有 CP 解锁 UI 逻辑 · v1.0 完全删除** —— 当前仅店员单视角，无跨视角 CP 内容，保留是纯冗余、且易带来状态残留 / UI 误触发。v2.0 多 POV 上线时按规范重新接入
 - `state` 对象 + 所有 render / trigger / play / close 函数 —— 从零
 - 结局数据组装（`buildEndingLines` 中的 hidden lines 分档判断）—— 按新 world flag 命名从零
 
@@ -269,6 +271,64 @@ v1 / v2 一律不认，玩家从头开始（当前用户群体极小，可接受
 
 **呈现**：淡入 200ms → 停留 3s → 淡出 300ms，或者一直挂在场景底部（如果整个 asset 都没加载）。**不弹 alert()，不用红色警告色**。
 
+### 20. 沉浸感优化四层规范（听觉 / 视觉 / 交互 / 叙事）
+
+**三不原则**：不主动提醒 · 不打断节奏 · 不破坏留白 · 所有效果做「淡到几乎察觉不到，但潜意识提升代入感」的程度。
+
+#### 20.1 听觉沉浸（v1.0 落地 · 复用现有 Web Audio · 零新增素材）
+
+**场景化 ambient 分层权重**（用现有 4 层：冷柜低噪 / 关东煮咕嘟 / 门外风声 / 远处街底白噪，按当前 card 调整音量占比）：
+
+| 当前 card | 冷柜低噪 | 关东煮咕嘟 | 门外风声 | 远处街底 |
+|---|---|---|---|---|
+| doorstep（门口台阶） | 10% | — | 60% | 30% |
+| register（收银台） | 40% | 40% | 20% | — |
+| dispenser（热食区） | 40% | 40% | 20% | — |
+| window（窗边） | 50% | 20% | 30% | — |
+| shelves（货架） | 50% | 20% | 30% | — |
+
+**场景切换 ambient 交叉渐变**：两层音轨线性交叉，跟卡片滑动同步完成（400ms 内），无突兀跳变。
+
+**UI 音效消音处理**：
+- 保留：门铃 · 扫码 · 玻璃门开合 · 猫叫（真实物理音效） · 音量统一压到 -18db 以下
+- 删除：按钮点击 · 选项选中 · 弹窗弹出（所有 UI 反馈音，避免"游戏反馈音"打破代入）
+
+**音效前置 / 后置时序**：
+- 客人进店：门铃先响 → 120ms 后 scrollToCard（现有 §14 已规定）
+- 客人离店：先滑动场景回空场 → 150ms 后玻璃门合上音效（"人走出去、门才带上"的物理时序）
+
+#### 20.2 视觉沉浸（v1.0 落地 · 仅 CSS · 不换场景图）
+
+- **深夜色彩基调**：整体亮度压 10%（body `filter: brightness(0.9)` 或场景卡 CSS）· 文本用低饱和暖白（不是 `#fff`，用 `#f2ede0` 类似）· UI 元素默认 30% opacity · hover 升 80%
+- **文本区轻量化**：文本框半透明毛玻璃底（`backdrop-filter: blur(8px)` + `background: rgba(20,18,15,0.6)`）· 无边框 · 无尖角（`border-radius: 6px`）· 浮在场景底部不遮挡核心区
+- **「继续」按钮**：缩到最小 · 放文本右下角 · 默认半透明 · 无边框无底色 · 只用细体文字（arch §15 已规定 30% → 80%）
+
+#### 20.3 交互沉浸（v1.0 落地 · 仅逻辑）
+
+- **弱化热区反馈**：hover 只 +10% opacity · 无缩放 · 无发光 · 无下划线（模拟"注意力落在物件上"而非"点击按钮"）
+- **玩家操作绝对优先**：自动动画进行中被玩家操作打断 → 立即切到玩家操作结果（arch §15 硬规则已规定）
+- **零错误提示 · 零无效反馈**：玩家点错位置 / 点空白 / 做非法操作 → **什么都不发生**，像没操作过一样 · **绝对不弹** "您不能点击这里" "请先完成对话" 这类系统提示
+
+#### 20.4 叙事沉浸（v1.0 落地 · canon 已定内容 · 这里补规则化落地要求）
+
+**三档善意的动作差异**（beat text 里必须用白描落到位，不带心理活动、不带情绪评价）：
+- 冷漠档：全程低头 · 视线不接触客人 · 手指快速动作（数硬币 / 扫码 / 推东西）
+- 默认档：抬眼扫一下客人 · 手上动作不停 · 不多话
+- 热心档：视线短暂停留 · 手上悄悄做递东西 / 调暖气 / 换袋子的动作
+
+**物件状态与选择的场景视觉呼应**（结局画面里的场景细节跟着变，见 [[midnight-store-cashier-canon]] 结局变体表的"场景视觉呼应"段）：
+- 煮了关东煮（`odenState === 'hot'`）→ 结局关东煮锅的热气更浓（呼吸动效透明度上限从 15% → 25%）· 台面上多两串剩的空签子
+- 留了门缝（`doorGap === 'open'`）→ 结局画面门底一道细暖光 · 台阶上的猫缩得更松
+- 给少年递了充电线（`chargerState === 'given'`）→ 结局收银台边缘的充电线不见了
+
+**规则**：这些视觉呼应**不做任何提示**——玩家发现了会有"原来我做的事真的留下了痕迹"的惊喜 · 没发现完全不影响体验 · 符合"无人知晓的温柔"内核。
+
+#### 20.5 迭代方向（v1.1+ · 首版不做 · 见 [[midnight-store-cashier-future]] v1.1 backlog）
+
+- **听觉**：偶发环境音（每 2-3 分钟随机远处车声 / 落叶 / 夜宵摊收摊）· 弱空间音效（门铃 / 猫叫左声道偏移）
+- **视觉**：场景元素呼吸动效具体参数（关东煮热气 4s 周期 ±15% 透明度 / 街灯 5s ±8% 亮度 / 冷柜 6s ±5% 亮度） · 时间流逝色温渐变（开局偏冷蓝 → 少年阶段微偏暖紫）· 落地窗雾气纹理 + 随机冷凝水滴 · 车灯光影每几分钟从左扫右
+- **交互**：无缝加载（资源预加载 + 用滑动 / 淡入掩盖加载）· 热区边缘 10px 外扩容错
+
 ---
 
 ## 附加规范（Todo 补充项已并入）
@@ -300,7 +360,8 @@ v1 / v2 一律不认，玩家从头开始（当前用户群体极小，可接受
 | 9 | 门 缝 · 一 条 窄 光 | 触发 doorway shard | `doorGap` |
 
 **规则**：
-- 解锁条件是"触发过对应 beat"，**不分冷漠 / 默认 / 热心档位**——只要点过一次就算解锁
+- **解锁时机：beat close 完整结束时解锁**（跟 `saveState` 写入时机对齐）· 中途关 dialog 不算 · F5 刷新不算 · 只有走完 beat 的最后一页点了「继续」才算解锁
+- 解锁条件是"触发过对应 beat 且完整看完"，**不分冷漠 / 默认 / 热心档位**——只要完整走过一次就算解锁
 - 未解锁的条目显示「？？？」（图鉴 UI 里）
 - **不做**收集进度条 · **不做**成就弹窗 · **不做**"已解锁 X / 9" toast · **不做**新解锁小红点
 - 解锁瞬间无任何 UI 反馈，玩家自己打开图鉴时才看到已解锁
