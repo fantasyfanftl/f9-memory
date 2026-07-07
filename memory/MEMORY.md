@@ -75,7 +75,7 @@
 - [漏传排查 SOP](sop-file-transfer-check.md) — 模型/贴图/材质 3 项核对，防止"做了但没传"
 - [周四组会](sop-weekly-meetings.md) — 唯一固定会议，天蓝汇报进度 + 版本风险
 - [沟通优先级 4 层](sop-communication-priority.md) — 立即/30min/2h/当日下班前 分级
-- [待写：任务划分标准](sop-work-triage-needed.md) — 分清必接/可延/可婉拒，减少无效打断
+- [任务分级 SOP](sop-work-triage.md) — 3 类必接（教学/咨询/提醒）+ 2 类可推 + 判断树 + 回复模板 + 沉淀触发
 
 ## 副业 · lycheeGame 生态
 
