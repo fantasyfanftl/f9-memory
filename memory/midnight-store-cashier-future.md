@@ -35,8 +35,10 @@ metadata:
 - 无缝加载：资源预加载 + 用滑动 / 淡入掩盖加载过程 · 永远不出现加载进度条 / 百分比
 - 热区边缘 10px 外扩容错
 
-**场景卡合并（M4 · 从 v1.0 移入）**：
-- 合并 `register` + `dispenser` 两卡为单卡「收银台&热食区」· 用 gpt-image-2 skill v1.0.1 重绘一张 "收银台 + 关东煮锅 + 饮水机" 合景全景图 · 迁移 HOTSPOTS 里 `odenPot` / `waterDispenser` / `phone` / `register` 四个热区的 card 属性从 `dispenser`/`register` 统一为新卡 · 更新 CARDS 数组从 5 → 4 · 预估 15-30 min 生图 + 20 min 坐标迁移
+**场景卡合并（M4 · 从 v1.0 移入）· 已被更大方案替代**：
+- **⚠️ 2026-07-07 更新**：本项被更完整的场景全量重绘方案覆盖 → 详见 [[midnight-store-scene-redraw-plan]]（v1.1 场景重绘精简版 · 4 规则 + 3 冲突 + 5 步执行）
+- 原方案（保留作历史参考）：合并 `register` + `dispenser` 两卡为单卡「收银台&热食区」· 用 gpt-image-2 skill v1.0.1 重绘一张合景全景图 · 15-30 min 生图 + 20 min 坐标迁移
+- **新方案范围更大**：不只合并 2 卡，是基于统一视点重绘全部 5 张，用 Blender 3D 建模而非 AI 生图（AI 生图达不到跨图一致性 · 见 [[feedback-ai-gen-instability]]）
 - 迁移原因：v1.0 用户列偏差清单里 M4 项本来要在 v1.0 修，但为保 v1.0 上线节奏移入 v1.1
 - v1.0 现状：收银台与热食区**是同一物理空间的两个视角卡**，玩家左右滑动可切换查看
 

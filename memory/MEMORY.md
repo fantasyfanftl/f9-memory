@@ -11,6 +11,7 @@
 - [Midnight Store · 验收正典 17 用例](midnight-store-cashier-acceptance.md) — 兜底逻辑测试用例全集，重写完必须逐条跑过才发布
 - [Midnight Store · v1.0 之后扩展 backlog](midnight-store-cashier-future.md) — v1.1 氛围细化 / v1.2 多周目文本 / v2.0 多客同店 + 三 POV 框架 · 只列架构方向和预留规则
 - [Midnight Store · 自检 checklist](midnight-store-selfcheck.md) — 改任何东西之前跑一遍：剧本对齐 / 顶视图对齐 / hotspot 校对 / 反模式清单 / 发布 checklist
+- [Midnight Store · v1.1 场景重绘方案精简版](midnight-store-scene-redraw-plan.md) — 4 条强制规则 + 3 处冲突 + 5 步执行 · v1.0 稳定后启动 · 优选 Blender 不用 AI
 - [求合体 rules](project-qiuheti-rules.md) — 「求合体」是三消合成 + 铺满地图,不是 2-drag 合并;别搞混
 - [Per-town unique icons](project-per-town-unique-icons.md) — 求合体地图每个村庄要有自己主题的独特图标,不能都用同一张
 - [3D 微缩图标生图 SOP](sop-3d-miniature-icon-pipeline.md) — 生 PNG → 抠透明 → WEBP 压 → cache-bust,含 prompt 心法/尺寸叙事表/避雷坑
@@ -76,6 +77,7 @@
 - [周四组会](sop-weekly-meetings.md) — 唯一固定会议，天蓝汇报进度 + 版本风险
 - [沟通优先级 4 层](sop-communication-priority.md) — 立即/30min/2h/当日下班前 分级
 - [任务分级 SOP](sop-work-triage.md) — 3 类必接（教学/咨询/提醒）+ 2 类可推 + 判断树 + 回复模板 + 沉淀触发
+- [每日 5 大块检视 SOP](sop-daily-checklist-by-area.md) — 5 大责任块每日 checklist + 1 每周文档沉淀，替代凭感觉安排
 
 ## 副业 · lycheeGame 生态
 
