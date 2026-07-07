@@ -27,8 +27,9 @@
 ## 工作 · 项目状态
 
 - [挂点与BS结算](project-attachment-point-bs.md) — 帽子/发饰/耳饰挂角色身上的位置计算，含团队分工
+- [配饰完整工作流 10 步](project-accessory-workflow-fullcycle.md) — 运营→原画→我→外派→绑定→资产→挂点 全链条
 - [配饰数据流水线](project-accessory-pipeline.md) — 三表联动 + 挂点镜像 + 截图归档 + 排期同步的基础设施
-- [在研配饰清单](project-accessories-active.md) — 当前所有活跃项目（YG098/P197/P163/P209/ST019/P142/ST021）+ 16 项在研
+- [在研配饰清单](project-accessories-active.md) — 当前所有活跃项目（YG098/P197/P163/P209/ST019/P142/ST021）+ 16 项在研 · 主线 009 版本
 - [河北奥玛外包状态](project-hebei-aoma-status.md) — 殷岩岩提交的多批文件待审核
 - [外派经验分享计划](project-outsource-experience-share.md) — 组织陈明星等人做经验分享
 - [历史资产遗留问题](project-legacy-asset-issues.md) — 原色无 ID 导致染色对不上（薯片头套）；外派改 UV 导致返工
@@ -45,7 +46,7 @@
 
 ## 工作 · 通用原则/偏好
 
-- [碎片化工作](feedback-fragmented-work.md) — 主线被日常打断，要量化时间去向
+- [碎片化工作](feedback-fragmented-work.md) — 主线被日常打断，极易烦躁；下班后最高效
 - [外包审核节奏](feedback-outsource-rhythm.md) — 高模仔细对，低模顺畅推
 - [材质原则](feedback-material-principles.md) — 对比度（黑够黑亮够亮） + 边光让位反射
 - [数据同步只填空白](feedback-only-fill-blanks.md) — 向主表同步外部数据时不覆盖已有字段
@@ -55,6 +56,7 @@
 - [原画沟通成本](feedback-artist-comm-cost.md) — 菜刀反馈总在猜，靠反问模板 + 示范图降本
 - [AI 生图受挫](feedback-ai-gen-instability.md) — 不稳定/三视图偏差大；定位为灵感辅助不是成品
 - [焦虑影响判断](feedback-anxiety-affects-judgment.md) — 急的时候别做重大判断，找搭档兜底
+- [外派私聊传文件乱](feedback-outsource-file-mess.md) — 文件零散/多开卡/规范反复讲
 
 ## 工作 · SOP
 
@@ -69,5 +71,12 @@
 - [每周外派任务分配](sop-external-task-assignment.md) — 避免人力空闲和任务撞车
 - [反馈用图/视频](sop-feedback-with-visuals.md) — 3D 视觉反馈用视觉物料比文字准
 - [待写：配件 check 表 + 外派/外包制作规范](sop-piece-check-list-needed.md) — open item，找空 2h 先做外派手册整合
-- [挂点环境限制](sop-attachment-env-constraint.md) — 挂点/BS 只能楼上做（拉 main），派任务要考虑楼上时间成本
+- [挂点环境限制](sop-attachment-env-constraint.md) — 楼下无外网/权限差异/挂点必须楼上做
 - [漏传排查 SOP](sop-file-transfer-check.md) — 模型/贴图/材质 3 项核对，防止"做了但没传"
+- [周四组会](sop-weekly-meetings.md) — 唯一固定会议，天蓝汇报进度 + 版本风险
+- [沟通优先级 4 层](sop-communication-priority.md) — 立即/30min/2h/当日下班前 分级
+- [待写：任务划分标准](sop-work-triage-needed.md) — 分清必接/可延/可婉拒，减少无效打断
+
+## 副业 · lycheeGame 生态
+
+- [Midnight Store · 便利店创作初衷](midnight-store-creation-motivation.md) — 现实糟心 → 群像叙事舒缓；当前卡在人物素材
