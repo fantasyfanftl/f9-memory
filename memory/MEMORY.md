@@ -3,6 +3,7 @@
 - [User GitHub](user-github.md) — GitHub identity and repo layout
 - [Voice input tool](voice-input-tool.md) — 自建 faster-whisper 语音输入 (Caps Lock PTT), GPU 加速, 注册表 Run 键静默开机启动
 - [User programs](user-programs.md) — 用户常用程序的路径映射表；说"打开 XX"时先查这里再启动
+- [Memory 目录物理架构](memory-junction-arch.md) — C 盘是 D 盘 f9-memory git repo 的 junction, 别当独立目录 rm
 
 ## 工作 · 岗位与团队
 
