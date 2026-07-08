@@ -1,4 +1,4 @@
-> **副业档案已迁移** · 2026-07-08 起,lycheeGame 生态(便利店/求合体/案卷九章/3D 微缩图标/站点)全部搬到 private repo [`f9-memory-side`](https://github.com/fantasyfanftl/f9-memory-side)。本 repo 只留主业(Papergames 恋与深空 3D 角色组) + 通用工具/身份。
+> **副业档案已迁移** · 2026-07-08 起,lycheeGame 生态(便利店/求合体/案卷九章/3D 微缩图标/站点)全部搬到 private repo [`f9-memory-side`](https://github.com/fantasyfanftl/f9-memory-side)。本 repo 只留主业(所属公司主线项目 3D 角色组) + 通用工具/身份。
 
 - [User GitHub](user-github.md) — GitHub identity and repo layout
 - [Voice input tool](voice-input-tool.md) — 自建 faster-whisper 语音输入 (Caps Lock PTT), GPU 加速, 注册表 Run 键静默开机启动
@@ -7,9 +7,9 @@
 
 ## 工作 · 岗位与团队
 
-- [Work role](user-work-role.md) — Papergames 恋与深空 3D 角色组，配饰审核 + 挂点BS + 外派管理
+- [Work role](user-work-role.md) — 所属公司主线项目 3D 角色组，配饰审核 + 挂点BS + 外派管理
 - [Team members - 外派](user-team.md) — 4 组 base 在职 13 人外派完整名单 + 内部对接人（菜刀/小杜等）
-- [Team members - 4 组群 6 人内部同事](user-team-internal.md) — 麦大麦/迪迦/翎汐蝶/阿彭/文安/别急/零一 (Papergames 内部)
+- [Team members - 4 组群 6 人内部同事](user-team-internal.md) — 麦大麦/迪迦/翎汐蝶/阿彭/文安/别急/零一 (公司内部)
 - [Team members - 已退场 9 人](user-team-former.md) — 刘嘉等历史外派档案，含话术参考
 
 ## 工作 · 项目状态

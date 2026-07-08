@@ -1,14 +1,14 @@
 ---
 name: user-work-role
-description: 天蓝的岗位 + 汇报链 + 恋与深空配饰完整工作流。上海杨浦区，Papergames 3D 角色组
+description: 天蓝的岗位 + 汇报链 + 主线项目配饰完整工作流。上海杨浦区，所属公司 3D 角色组
 metadata: 
   node_type: memory
   type: user
   originSessionId: a6080841-ce21-4ac0-8634-d3c36736a79d
 ---
 
-**公司**：Papergames
-**项目**：恋与深空
+**公司**：所属公司
+**项目**：主线项目
 **部门**：制作组 · 美术组 · 资产组 · 3D 角色组
 **所在地**：上海杨浦区
 

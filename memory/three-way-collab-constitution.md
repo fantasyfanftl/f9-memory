@@ -14,7 +14,7 @@ metadata:
 **参与者**：
 - **天蓝** —— 决策层，真人做事
 - **我**（GitHub Claude Code + `f9-memory` 仓库）—— 战略层
-- **飞书 AI**（Papergames aily 平台）—— 运营层
+- **飞书 AI**（所属公司 aily 平台）—— 运营层
 
 **试运营开始**：2026-07-07
 

@@ -1,6 +1,6 @@
 ---
 name: user-team-internal
-description: "恋与深空 3D 角色组的内部同事（Papergames 员工，不是外派）：麦大麦(组长)/迪迦/翎汐蝶/阿彭/文安/别急/零一。特指'4 组群'活跃人员"
+description: "主线项目 3D 角色组的内部同事（公司内部员工，不是外派）：麦大麦(组长)/迪迦/翎汐蝶/阿彭/文安/别急/零一。特指'4 组群'活跃人员"
 metadata: 
   node_type: memory
   type: user
@@ -8,13 +8,13 @@ metadata:
 ---
 
 ⚠️ **本文件跟 [user-team] 的"4 组 base 在职 13 人"完全不同**（虽然名字都带"4 组"）：
-- **4 组群**（chat_id `oc_2333adc9f813be04c60c869ee3843d65`）活跃 6 人 + 麦大麦 = Papergames 内部同事（本文件）
+- **4 组群**（chat_id `oc_2333adc9f813be04c60c869ee3843d65`）活跃 6 人 + 麦大麦 = 公司内部同事（本文件）
 - **4 组 base**（`FI1Wb1Ypbagi1oszRYjcsxQanYl`）在职 13 人 = 外派（见 [user-team]）
 
 ## 关键人：麦大麦 = 天蓝的组长
 
 **身份**：
-- **恋与深空 3D 角色组 组长**
+- **主线项目 3D 角色组 组长**
 - **天蓝的直接汇报对象**
 - 偶尔也是任务派发人
 
