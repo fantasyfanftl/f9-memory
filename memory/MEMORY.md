@@ -45,6 +45,7 @@
 - [AI 生图受挫](feedback-ai-gen-instability.md) — 不稳定/三视图偏差大；定位为灵感辅助不是成品
 - [焦虑影响判断](feedback-anxiety-affects-judgment.md) — 急的时候别做重大判断，找搭档兜底
 - [外派私聊传文件乱](feedback-outsource-file-mess.md) — 文件零散/多开卡/规范反复讲
+- [AI 报"没做"必须给卡点+解法+需求](feedback-ai-blocker-disclosure.md) — 铁律 #5 v2 · 适用飞书 AI 和我 · 别只报事实不报原因
 
 ## 工作 · SOP
 
