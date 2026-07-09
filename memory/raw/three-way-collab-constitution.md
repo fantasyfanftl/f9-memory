@@ -62,6 +62,10 @@ sop-work-triage / sop-communication-priority / sop-daily-checklist-by-area / sop
 **共同 4 项 · 待逐件拍归属**(2026-07-09 讨论中):
 sop-attachment-env-constraint / sop-art-outsource-oa-flow / sop-external-task-assignment / sop-piece-check-list-needed
 
+**2026-07-09 拍完**:
+- 飞书主导 · sop-attachment-env-constraint / sop-art-outsource-oa-flow / sop-piece-check-list-needed
+- GitHub 主导 · sop-external-task-assignment(抽象方法论)
+
 ---
 
 # 三方协作宪法(v0.1 保留 · 试运营版 · 2026-07-07)
