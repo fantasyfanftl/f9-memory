@@ -1,9 +1,17 @@
-# 天蓝 · 待办面板(GitHub 主版)
+# TODO · GitHub Claude 自留主版
 
-**范围**: 只放🤖AI 协作类待办 · 其他类别去飞书表格
-**同步**: 飞书表格 = 全量主版(镜像本主版🤖 + 天蓝手加其他)· Z 方案单向下行
+> **给 GitHub Claude 读的** · 天蓝日常唯一入口是飞书表格
+> https://papergames.feishu.cn/wiki/MVDiwBcVyiGh9Ek3d4tcrfTJnzc?table=tblecjoWqihQFXTz
+
+**范围**: 只放🤖AI 协作类待办 · GitHub Claude 边界内的事
+**其他类别**: 🎨/🔗/👥/📞/🧵/🏠/📋 全在飞书表 · GitHub Claude 读不到 · **不监控工作细节**
+**同步**: 飞书 schedule 单向下行 · 只同步🤖类 · 其他类别不反写
 
 **ID 规则**: `[T001]` 格式, 完成不复用编号, 下一条继续往后编 —— 便于飞书 upsert
+
+**天蓝加待办**:
+- 🤖AI 协作类 → 告诉 GitHub Claude · 我改这份 · 飞书 schedule 会同步
+- 其他类 → 直接飞书表加 · 不用告诉 Claude
 
 ---
 
@@ -54,4 +62,6 @@
 
 ## 非🤖类去哪
 
-去飞书表格 → https://papergames.feishu.cn/wiki/MVDiwBcVyiGh9Ek3d4tcrfTJnzc?table=tblecjoWqihQFXTz
+飞书表 → https://papergames.feishu.cn/wiki/MVDiwBcVyiGh9Ek3d4tcrfTJnzc?table=tblecjoWqihQFXTz
+
+**GitHub Claude 读不到飞书表** · 天蓝真要 Claude 关注某件工作事时 · 手动告诉一句
