@@ -1,23 +1,67 @@
 ---
 name: three-way-collab-constitution
-description: 天蓝 + 我 (GitHub Claude Code) + 飞书 AI 三方协作宪法，2026-07-07 试运营版。定义谁负责什么、数据流向、冲突以谁为准
+description: 天蓝 + GitHub Claude Code + 飞书 AI 三方职责宪法。2026-07-09 v0.2 前置章节升级
 metadata: 
   node_type: memory
   type: reference
   originSessionId: a6080841-ce21-4ac0-8634-d3c36736a79d
 ---
 
-# 三方协作宪法（试运营 v0.1）
+# 三方协作宪法(v0.2 · 2026-07-09 前置升级 · 原 v0.1 保留在后)
 
-> **2026-07-08 补丁**：副业(lycheeGame 生态)已剥离到 private repo `f9-memory-side`,不再进 AI 共享。本文件下述"副业+主业交叉""副业相关设计文档""副业相关"三处**已失效**,新架构下 GitHub `f9-memory` 只留主业 + 通用工具/身份。宪法 v0.2 待稳定后重写。
+## 三方职责 · 强制生效 · 2026-07-09 立
 
-**参与者**：
-- **天蓝** —— 决策层，真人做事
-- **我**（GitHub Claude Code + `f9-memory` 仓库）—— 战略层
-- **飞书 AI**（所属公司 aily 平台）—— 运营层
-- **豆包**（第 4 方 · 2026-07-08 补) —— 讨论助手 · 只陪天蓝想方案 · **不读 memory · 不操作文件 · 不参与落地**
+### 天蓝(决策层)
+- 拍板所有规则变动
+- **业务 SOP 首次落笔**(在飞书云文档)
+- 审批 AI 起草内容后才上线
 
-**试运营开始**：2026-07-07
+### 飞书 AI(运营层)
+- **业务 SOP 主导**(外发规范 + 内部业务流程)· 天蓝在飞书写,它整理 / push 到 GitHub 归档
+- 定时任务 / 群消息监控 / base 读写 / IM 推送
+- 天蓝原始输入的**第一手承接方**
+
+### GitHub Claude(结构治理层 + 抽象规则层)
+- **结构治理独占**: memory 分层 / MEMORY.md / .aiignore / 三方协作规则本身
+- **抽象规则主导**: 元规则 / 方法论 / 打断链保护 / 跨场景抽象(如 sop-work-triage / feedback-doc-style)
+- **收束 + 防冗余**: 天蓝发散想法整合成决策 · 飞书写得啰嗦时起精简版
+- **不主导业务 SOP**(不定颜色、不定命名、不定挂点细节)
+
+### 豆包(第 4 方 · 讨论助手)
+- 陪天蓝想方案 · 提出讨论输入
+- **不读 memory · 不操作文件 · 不参与落地**
+
+## 边界原则
+
+- 一件事**只有一个主导方** · 其他两方是辅助
+- 业务遇到抽象/结构问题 → **升级到 GitHub Claude**
+- 抽象规则遇到业务落地 → **升级到飞书 / 天蓝**
+- 三方每周同步一次 · 有分歧走天蓝拍板
+
+## 具体归属(2026-07-09 分类 · sop-active/ 现存 17 个)
+
+**外发规范 → 飞书主导**(飞书云文档写 → push GitHub 归档):
+sop-color-check / sop-naming-conventions / sop-file-submission-tips / sop-earring-fit / sop-attachment-point-workflow / sop-file-transfer-check / sop-feedback-with-visuals
+
+**抽象方法论 → GitHub 主导**(我起草 · 天蓝审):
+sop-work-triage / sop-communication-priority / sop-daily-checklist-by-area / sop-work-time-tracking / sop-weekly-meetings / sop-outsource-triage
+
+**共同 4 项 · 待逐件拍归属**(2026-07-09 讨论中):
+sop-attachment-env-constraint / sop-art-outsource-oa-flow / sop-external-task-assignment / sop-piece-check-list-needed
+
+---
+
+# 三方协作宪法(v0.1 保留 · 试运营版 · 2026-07-07)
+
+> **2026-07-08 补丁**:副业(lycheeGame 生态)已剥离到 private repo `f9-memory-side`,不再进 AI 共享。本文件下述"副业+主业交叉""副业相关设计文档""副业相关"三处**已失效**。
+
+**参与者**:
+- **天蓝** —— 决策层,真人做事
+- **我**(GitHub Claude Code + `f9-memory` 仓库) —— 战略层(v0.2 已更精确为"结构+抽象层")
+- **飞书 AI**(所属公司 aily 平台) —— 运营层
+- **豆包**(第 4 方 · 2026-07-08 补) —— 讨论助手 · 只陪天蓝想方案 · **不读 memory · 不操作文件 · 不参与落地**
+
+**试运营开始**:2026-07-07
 
 ## 三层分工
 
