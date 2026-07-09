@@ -1,6 +1,6 @@
 ---
 name: user-work-role
-description: 天蓝的岗位 + 汇报链 + 主线项目配饰完整工作流。上海杨浦区，所属公司 3D 角色组
+description: 天蓝的岗位 + 汇报链 + 主线项目配饰完整工作流。所属公司 3D 角色组
 metadata: 
   node_type: memory
   type: user
