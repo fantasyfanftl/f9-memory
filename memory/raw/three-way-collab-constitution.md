@@ -91,6 +91,10 @@ metadata:
 
 **HARD RULE**: 报"成功"必须附**二次验证的证据**(读到的真值),不能只报 API 返回码
 
+**子规则 · schedule/trigger 立完必读 desc + cron 一致**(2026-07-09 14:00 立)
+- 立 schedule/trigger 后 · 必读描述文字 + cron 表达式 · 对比一致才算完
+- 起源: TODO 同步 trigger 立时 desc="每天 9:00" cron="03:00" 矛盾 · 直到查才发现
+
 ## 具体归属(2026-07-09 分类 · sop-active/ 现存 17 个)
 
 **外发规范 → 飞书主导**(飞书云文档写 → push GitHub 归档):
