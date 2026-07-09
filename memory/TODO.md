@@ -30,6 +30,7 @@
 - [ ] **[T018]** 飞书建 2 schedule · 等 T017 push 后启动
 - [ ] **[T020]** Q4 外发手册 · 天蓝在飞书云文档建《配饰制作外发手册》· 整合 7 项外发规范 · 不镜像 GitHub
 - [ ] **[T021]** 观察 v0.2 沉淀链路 · 首跑 commit faf3eb5(sop-color-check+1 / feedback-with-visuals+4)· 观察 1 周后总结经验
+- [ ] **[T022]** V9 表优化 · 排 2026-07-11(周六) · 痛点已记 raw/t022-v9-table-optimization.md · 讨论 formula vs single_select 逃逸方案
 
 ## 🟡 等 X 才能动
 
