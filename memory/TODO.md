@@ -24,7 +24,6 @@
 - [ ] **[T003]** SOP 合并拍板 · 方案在 raw/consolidation-plan.md + 洞 3 (质量类) 转飞书走 v0.2 沉淀链路 · 待天蓝+豆包+我逐组过
 - [ ] **[T005]** 归档规则 3 条试运行 · 讨论输入在 raw/t005-archive-rule-discussion.md · 待天蓝+豆包+我过
 - [ ] **[T007]** 观察飞书 AI 铁律瘦身后是否稳定 · 7-15 后复盘 v2 单行/v3 不表扬/授权阈值守没守
-- [ ] **[T014]** 主 repo 加 .aiignore · 物理防线让 AI 别扫 raw/ growth/ · 我起草 v1 待审
 - [ ] **[T016]** 让我每次会话开头自动读 TODO.md · 加 hook 或改 memory · 我起草方案待审
 - [ ] **[T017]** 起草 sop-maintenance-cadence · 3 层节奏(周/月/季) · 周三下班后触发 · 集成豆包月度巡检 3 项(分层合规/目录归位/AI 读取抽检)
 - [ ] **[T018]** 飞书建 2 schedule · 等 T017 push 后启动
