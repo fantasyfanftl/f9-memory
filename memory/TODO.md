@@ -23,7 +23,6 @@
 
 - [ ] **[T005]** 归档规则 3 条试运行 · 讨论输入在 raw/t005-archive-rule-discussion.md · 待天蓝+豆包+我过
 - [ ] **[T007]** 观察飞书 AI 铁律瘦身后是否稳定 · 7-15 后复盘 v2 单行/v3 不表扬/授权阈值守没守
-- [ ] **[T018]** 飞书建 2 schedule · 等 T017 push 后启动
 - [ ] **[T020]** Q4 外发手册 · 天蓝在飞书云文档建《配饰制作外发手册》· 整合 7 项外发规范 · 不镜像 GitHub
 - [ ] **[T021]** 观察 v0.2 沉淀链路 · 首跑 commit faf3eb5(sop-color-check+1 / feedback-with-visuals+4)· 观察 1 周后总结经验
 - [ ] **[T022]** V9 表优化 · 排 2026-07-11(周六) · 痛点已记 raw/t022-v9-table-optimization.md · 讨论 formula vs single_select 逃逸方案
@@ -53,6 +52,7 @@
 - [x] **[T014]** 主 repo 加 .aiignore · 删除 · 无实际问题 · 未来出问题再做 · 2026-07-11
 - [x] **[T016]** 让我每次会话开头自动读 TODO.md · SessionStart hook 已加 · 2026-07-12
 - [x] **[T017]** 起草 sop-maintenance-cadence · 3 层节奏(周月合并/季) · 周三下班后触发 · 2026-07-12
+- [x] **[T018]** 飞书建 2 schedule · 删除 · 已被现有 weekly trigger + 飞书表📋类别 + 元原则覆盖 · 2026-07-12
 - [x] 宪法 v0.2 前置章节 · 三方职责重定位 · GitHub Claude 结构+抽象规则层 · 2026-07-09
 - [x] 宪法 v0.2 沉淀链路 · 6 步流程 · 抽象权在天蓝+GitHub Claude · 2026-07-09
 - [x] 共同 4 项归属 · 3 飞书 / 1 GitHub · 2026-07-09
