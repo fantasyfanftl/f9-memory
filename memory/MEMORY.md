@@ -34,3 +34,4 @@
 
 - [每日 5 大块检视](sop-active/sop-daily-checklist-by-area.md) — 5 责任块 checklist + 每周文档沉淀
 - [工作量记录](sop-active/sop-work-time-tracking.md) — 每天记预估/实际/中断源
+- [知识库维护节奏](sop-active/sop-maintenance-cadence.md) — 周/月 2 层节奏 + 季度大盘复盘 · 周三下班后触发
