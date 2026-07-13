@@ -1,6 +1,6 @@
 ---
-name: sop-挂点
-description: 挂点 BS 完整工作流 + 环境约束 · 详细版见飞书《饰品挂点操作手册》
+name: sop-挂点BS
+description: 挂点 + BS 全流程闭环 · 详细版见飞书《饰品挂点操作手册》
 metadata:
   node_type: memory
   type: sop

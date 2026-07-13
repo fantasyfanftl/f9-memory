@@ -1,6 +1,6 @@
 ---
-name: sop-外派管理
-description: 外派管理集合 · 手册 + 任务分配 + OA 采购 · 顺序按业务流
+name: sop-外派外包管理
+description: 外派外包全链路管理 · 手册 + 任务分配 + OA 采购 · 顺序按业务流
 metadata:
   node_type: memory
   type: sop

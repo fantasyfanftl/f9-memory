@@ -1,6 +1,6 @@
 ---
-name: sop-节奏
-description: 节奏集合 · 每日 5 大块 + 工作量记录 + 维护节奏(周/月/季)
+name: sop-工作节奏
+description: 个人工作节奏 · 每日 5 大块 + 工作量记录 + 维护节奏(周/月/季)
 metadata:
   node_type: memory
   type: sop
