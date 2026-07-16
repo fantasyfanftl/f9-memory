@@ -36,7 +36,7 @@
 
 - [ ] **[T021]** 观察 v0.2 沉淀链路 · 首跑 commit faf3eb5(sop-color-check+1 / feedback-with-visuals+4)· 观察 1 周后总结经验
 - [ ] **[T023]** 天蓝复核 5 份 SOP · 挂点BS/制作规范/外派外包管理/沟通/工作节奏 · 每份打开看 · 参与修改 · 确认对不对 · 含 MEMORY.md 索引描述改具体
-- [ ] **[T024]** 观察沉淀镜像 schedule 首跑 · trigger_meta_4kkq6brpwwjyv · 7-15 周三 19:30 触发 · 验证 5 点(时间/字段/附件超链接/覆盖/可读性)
+- [ ] **[T027]** push 凭据长期方案 · 荔枝沙箱无 GitHub 凭据 · 走 PAT(fine-grained · 只给 f9-memory Contents R/W) vs 手动中转 · 待天蓝拍
 
 ## 🟡 等 X 才能动
 
@@ -76,6 +76,7 @@
 - [x] **[T020]** Q4 外发手册 · 已被飞书外包对接 SOP + 外包配饰制作规范覆盖 · 2026-07-13
 - [x] **[T022]** V9 表优化 · 天蓝拍已完成 · 2026-07-13
 - [x] **[T025]** 飞书表使用说明存档 · push 到 memory/feishu-mirror/todo-table-usage.md · commit 2747711
+- [x] **[T024]** 沉淀镜像 schedule 首跑 · 7-15 荔枝下行 7 条数据 · 5 点验证过 4 · push 凭据留 T027 · commit e591f46 · 2026-07-15
 
 ---
 
