@@ -1,7 +1,8 @@
 # TODO · GitHub Claude 自留主版
 
 > **给 GitHub Claude 读的** · 天蓝日常唯一入口是飞书表格
-> https://papergames.feishu.cn/wiki/MVDiwBcVyiGh9Ek3d4tcrfTJnzc?table=tblecjoWqihQFXTz
+> https://papergames.feishu.cn/base/TsH7btVPnaFaPzsxLwMc3YP7nzb?table=tbly91w3ZyUN4fZE&view=vewyqz6JAc
+> **飞书表 · 2026-07-22 换过一次 · 旧 wiki 表已归档 · 荔枝 schedule 已切**
 
 **范围**: 只放🤖AI 协作类待办 · GitHub Claude 边界内的事
 **其他类别**: 🎨/🔗/👥/📞/🧵/🏠/📋 全在飞书表 · GitHub Claude 读不到 · **不监控工作细节**
@@ -94,6 +95,6 @@
 
 ## 非🤖类去哪
 
-飞书表 → https://papergames.feishu.cn/wiki/MVDiwBcVyiGh9Ek3d4tcrfTJnzc?table=tblecjoWqihQFXTz
+飞书表 → https://papergames.feishu.cn/base/TsH7btVPnaFaPzsxLwMc3YP7nzb?table=tbly91w3ZyUN4fZE&view=vewyqz6JAc
 
 **GitHub Claude 读不到飞书表** · 天蓝真要 Claude 关注某件工作事时 · 手动告诉一句
